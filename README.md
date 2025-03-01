@@ -1,2 +1,2 @@
 # TableEG
-A framework for generating realistic tabular data errors using LLMs
+A benchmarking framework for generating realistic tabular data errors using LLMs
