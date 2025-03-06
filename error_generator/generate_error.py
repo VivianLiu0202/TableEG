@@ -600,15 +600,14 @@ if __name__ == "__main__":
     print(f"[INFO] Error log generated and saved at: {error_log_path}")
 
     # ===============================
-    # 读取 JSONL 文件并应用错误到数据集
+    # Read JSONL file and apply errors to the dataset
     # ===============================
     with open(error_log_path, "r", encoding="utf-8") as f:
         error_list = f.readlines()
 
-    # 应用错误到 `df_clean`，生成 `dirty` 版本数据集
+    # Apply errors to `df_clean` to generate the `dirty` version of the dataset
     df_dirty = error_generator.apply_errors_to_dataframe(df_clean, error_list, used_cells)
 
-    # 保存 `dirty` 数据集
+    # Save the `dirty` dataset
     df_dirty.to_csv(dirty_output_path, index=False)
-    print(f"[INFO] Dirty dataset saved at: {dirty_output_path}")
-
+    print(f"[INFO] Dirty dataset successfully saved at: {dirty_output_path}")
