@@ -1,7 +1,9 @@
 <h1 align="center">🚀 Towards Practical Benchmarking of Data Cleaning Techniques: On Generating Authentic Errors via Large Language Models</h1>
 <h3 align="center">A framework for generating realistic tabular data errors using LLMs</h3>
 
-#📌 Overview
+
+
+# 📌 Overview
 
 ### 📖 Abstract
 
@@ -40,6 +42,8 @@ conda env create -f TableEG_env.yaml
 conda activate TableEG_env
 cd TableEG
 ```
+
+
 
 
 
@@ -116,6 +120,8 @@ Below is a **structured breakdown** of dataset and model files, including storag
 
 
 
+
+
 ### 📊 Data Source
 
 The datasets used in this work contain both **clean** and **real-world erroneous** data, primarily sourced from [**CleanML**](https://github.com/chu-data-lab/CleanML) **and** [**Raha**](https://github.com/BigDaMa/raha). These datasets span multiple domains and include various error types to ensure diverse and realistic data corruption patterns.
@@ -138,6 +144,8 @@ The datasets used in this work contain both **clean** and **real-world erroneous
 
 
 
+
+
 # 🛠 Run the Framework
 
 ### 🚀 Generate Training Data (Prompt_Builder)
@@ -148,11 +156,15 @@ bash generate_data.sh
 
 
 
+
+
 ### 🏋️ Train the Model (Trainer)
 
 ```bash
 python train/train_llama3_lora.py
 ```
+
+
 
 
 
@@ -184,6 +196,8 @@ error_log_path, used_cells = error_generator.generate_errors_across_dataset(
 
 
 
+
+
 ### 📊 Evaluate the Model (Evaluator)
 
 ```bash
@@ -193,6 +207,9 @@ python evaluation/Error_Pattern_Evaluation.py
 
 
 
+
+
 # 🎖 Acknowledgement
+
 We sincerely appreciate the contributions of outstanding works that laid the foundation for this research: [TableGPT](https://github.com/microsoft/Table-GPT), [CleanML](https://github.com/chu-data-lab/CleanML), [Llama3](https://github.com/meta-llama/llama3).
 
